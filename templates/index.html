@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
+{% block navbar %}
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+        <div class="logo">
+            <h1><a href="{{ url_for('index') }}"><span>KB</span>-InterTech</a></h1>
+        </div>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="{{ url_for('index') }}">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+{% endblock %}
+
 {% block content %}
 <section id="hero">
     <div class="hero-container">
@@ -9,10 +24,12 @@
                 <div class="carousel-item active" style="background-image: url(./static/img/hero-carousel/1.jpg)">
                     <div class="carousel-container">
                         <div class="container">
+                            <h1 class="display-4">☕️ Coffee & Wifi 💻</h1>
                             <h2 class="animate__animated animate__fadeInDown">Welcome to KB-InterTech</h2>
                             <p class="animate__animated animate__fadeInUp">We're in the business of helping You find the
                                 best and most comfortable Cafe with the best Wifi and Coffee</p>
-                            <a href="{{ url_for('cafe') }}" class="btn-get-started scrollto animate__animated animate__fadeInUp">
+                            <a href="{{ url_for('cafe') }}"
+                               class="btn-get-started scrollto animate__animated animate__fadeInUp">
                                 Find Cafe</a>
                         </div>
                     </div>
@@ -22,9 +39,11 @@
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Click Find Cafe to check the list of
                                 cafes available</h2>
-                            <p class="animate__animated animate__fadeInUp">Finding the best Cafe with, the best Wifi and Coffee just got
-                            easier</p>
-                            <a href="{{ url_for('cafe') }}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Find Cafe</a>
+                            <p class="animate__animated animate__fadeInUp">Finding the best Cafe with, the best Wifi and
+                                Coffee just got
+                                easier</p>
+                            <a href="{{ url_for('cafe') }}"
+                               class="btn-get-started scrollto animate__animated animate__fadeInUp">Find Cafe</a>
                         </div>
                     </div>
                 </div>
@@ -32,8 +51,9 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">KB-InterTech</h2>
-                            <p class="animate__animated animate__fadeInUp">We offer the easiest way to find quality and professional
-                            developers for on-site and remote projects</p>
+                            <p class="animate__animated animate__fadeInUp">We offer the easiest way to find quality and
+                                professional
+                                developers for on-site and remote projects</p>
                             <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
                                 Started</a>
                         </div>
@@ -65,7 +85,7 @@
                     <div class="about-move">
                         <div class="services-details">
                             <div class="single-services">
-                                <a class="services-icon" href="#">
+                                <a class="services-icon" href="https://github.com/PythonDecorator">
                                     <i class="bi bi-briefcase"></i>
                                 </a>
                                 <h4>Web developers</h4>
@@ -80,7 +100,7 @@
                     <div class="about-move">
                         <div class="services-details">
                             <div class="single-services">
-                                <a class="services-icon" href="#">
+                                <a class="services-icon" href="https://github.com/PythonDecorator">
                                     <i class="bi bi-card-checklist"></i>
                                 </a>
                                 <h4>Software Developers</h4>
@@ -96,7 +116,7 @@
                     <div class=" about-move">
                         <div class="services-details">
                             <div class="single-services">
-                                <a class="services-icon" href="#">
+                                <a class="services-icon" href="https://github.com/PythonDecorator">
                                     <i class="bi bi-bar-chart"></i>
                                 </a>
                                 <h4>Backend Developer</h4>
@@ -111,7 +131,7 @@
                     <div class="about-move">
                         <div class="services-details">
                             <div class="single-services">
-                                <a class="services-icon" href="#">
+                                <a class="services-icon" href="https://github.com/PythonDecorator">
                                     <i class="bi bi-binoculars"></i>
                                 </a>
                                 <h4>Git and Version Control</h4>
@@ -127,7 +147,7 @@
                     <div class=" about-move">
                         <div class="services-details">
                             <div class="single-services">
-                                <a class="services-icon" href="#">
+                                <a class="services-icon" href="https://github.com/PythonDecorator">
                                     <i class="bi bi-brightness-high"></i>
                                 </a>
                                 <h4>Frontend Developers</h4>
@@ -143,7 +163,7 @@
                     <div class=" about-move">
                         <div class="services-details">
                             <div class="single-services">
-                                <a class="services-icon" href="#">
+                                <a class="services-icon" href="https://github.com/PythonDecorator">
                                     <i class="bi bi-calendar4-week"></i>
                                 </a>
                                 <h4>Game Developers</h4>
@@ -157,6 +177,6 @@
             </div>
         </div>
     </div>
+</main>
 {% include "footer.html" %}
 {% endblock %}
-</main>

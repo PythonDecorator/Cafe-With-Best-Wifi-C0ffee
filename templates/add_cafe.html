@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+
+{% block styles %}
+{{super()}}
+<link href="../static/assets/css/style.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <span class="d-none d-lg-block">KB-InterTech</span>
+        </a>
+    </div>
+
+     <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+          </a><!-- End Profile Image Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Python Decorator</h6>
+              <span>Full Stack Developer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="{{ url_for('add_cafe') }}">
+                <i class="bi bi-person"></i>
+                <span>Add Cafe</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="{{ url_for('index') }}">
+                <i class="bi bi-question-circle"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="{{ url_for('index') }}">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+</header><!-- End Header -->
+
+<main id="main" class="main">
+    <section class="container col-lg-12">
+        <div class="pagetitle">
+            <h1>Add New Café</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="row g-3" method="POST" action="{{ url_for('add_cafe') }}" novalidate>
+                    {{ form.csrf_token }}
+                    <div class="col-md-8">
+                        {{ form.name.label(class="form-label") }}
+                        {{ form.name(class="form-control") }}
+                    </div>
+                    {% for error in form.location.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+
+                     <div class="col-md-8">
+                        {{ form.location.label(class="form-label") }}
+                        {{ form.location(class="form-control") }}
+                    </div>
+                    {% for error in form.location.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+
+                    <div class="col-md-8">
+                        {{ form.wifi_strength.label(class="form-label") }}
+                        {{ form.wifi_strength(class="form-select", aria_label="Default select example") }}
+                    </div>
+                    {% for error in form.wifi_strength.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+
+                    <div class="col-md-8">
+                        {{ form.coffee_price.label(class="form-label") }}
+                        {{ form.coffee_price(class="form-control", placeholder="₤0.00 - Add the currency") }}
+                    </div>
+                    {% for error in form.coffee_price.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+
+                    <div class="col-md-8">
+                        {{ form.seats.label(class="form-label") }}
+                        {{ form.seats(class="form-control") }}
+                    </div>
+                    {% for error in form.seats.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+
+                    <div class="col-md-8">
+                        {{ form.img_url.label(class="form-label") }}
+                        {{ form.img_url(class="form-control") }}
+                    </div>
+                    {% for error in form.img_url.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+
+                    <div class="col-md-8">
+                        {{ form.map_url.label(class="form-label") }}
+                        {{ form.map_url(class="form-control") }}
+                    </div>
+                    {% for error in form.map_url.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+                    <fieldset class="col-md-8">
+                        <legend class="col-form-label">Has Sockets</legend>
+                        <div class="col-md-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                       value="Yes" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                       value="No">
+                                <label class="form-check-label" for="gridRadios2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="col-md-8">
+                        {{ form.website.label(class="form-label") }}
+                        {{ form.website(class="form-control") }}
+                    </div>
+                    {% for error in form.website.errors %}
+                    <span style="color: red"> {{ error }}</span>
+                    {% endfor %}
+
+                    <div class="col-12 border-top-5">
+                        {{ form.submit(class="btn btn-primary") }}
+                    </div>
+                </form>
+
+                <div class="col-8 mt-3">
+                    <a href="{{ url_for('cafe') }}">
+                        <button class="btn btn-primary-outline">Back</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main><!-- End #main -->
+
+<footer>
+    <div class="footer-area-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="credits">
+                        Designed by <a href="#">Amos @PythonDecorator</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

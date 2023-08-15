@@ -6,113 +6,21 @@
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
             <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active" style="background-image: url(./static/img/hero-carousel/1.jpg)">
+                <div class="carousel-item active" style="background-image: url(./static/img/hero-carousel/6.jpg)">
                     <div class="carousel-container">
                         <div class="container">
-                            <h2 class="animate__animated animate__fadeInDown">Welcome to KB-InterTech</h2>
-                            <p class="animate__animated animate__fadeInUp">We're in the business of helping You find the
-                                best and most comfortable Cafe with the best Wifi and Coffee</p>
-                            <a href="{{ url_for('cafe') }}" class="btn-get-started scrollto animate__animated animate__fadeInUp">
-                                Find Cafe</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item" style="background-image: url(./static/img/hero-carousel/2.jpg)">
-                    <div class="carousel-container">
-                        <div class="container">
-                            <h2 class="animate__animated animate__fadeInDown">Click Find Cafe to check the list of
-                                cafes available</h2>
-                            <p class="animate__animated animate__fadeInUp">Finding the best Cafe with, the best Wifi and Coffee just got
-                            easier</p>
-                            <a href="{{ url_for('cafe') }}" class="btn-get-started scrollto animate__animated animate__fadeInUp">Find Cafe</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item" style="background-image: url(./static/img/hero-carousel/3.jpg)">
-                    <div class="carousel-container">
-                        <div class="container">
-                            <h2 class="animate__animated animate__fadeInDown">KB-InterTech</h2>
-                            <p class="animate__animated animate__fadeInUp">We offer the easiest way to find quality and professional
-                            developers for on-site and remote projects</p>
-                            <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
-                                Started</a>
+                            <p class="animate__animated animate__fadeInUp">Here are Cafes with data on power
+                                socket availability, wifi speed, coffee quality and more.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-            </a>
         </div>
     </div>
 </section>
-<main id="main">
-    <div id="services" class="services-area area-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline services-head text-center">
-                        <h2>Our Services</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="about-move">
-                        <div class="services-details">
-                            <div class="single-services">
-                                <a class="services-icon" href="#">
-                                    <i class="bi bi-briefcase"></i>
-                                </a>
-                                <h4>Web developers</h4>
-                                <p>
-                                    We can help you find web developers for responsive, functional, easy to use,
-                                    optimized for mobile and great UI/UX websites.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="about-move">
-                        <div class="services-details">
-                            <div class="single-services">
-                                <a class="services-icon" href="#">
-                                    <i class="bi bi-card-checklist"></i>
-                                </a>
-                                <h4>Software Developers</h4>
-                                <p>
-                                    We can help you find the best software developers that make professional and
-                                    future standard apps.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class=" about-move">
-                        <div class="services-details">
-                            <div class="single-services">
-                                <a class="services-icon" href="#">
-                                    <i class="bi bi-bar-chart"></i>
-                                </a>
-                                <h4>Backend Developer</h4>
-                                <p>
-                                    Get developers that write scalable easy to understand and innovative codes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 {% include "footer.html" %}
 {% endblock %}
-</main>
-
 
 
 
