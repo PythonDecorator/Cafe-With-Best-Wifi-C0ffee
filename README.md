@@ -29,7 +29,6 @@ This is a web app that helps users find the best Café in any chosen location
 - ✅  Responsive, BS5 Design
 - ✅ `DB Tools`: SQLAlchemy ORM, `Flask-Migrate` (schema migrations), 
 - ✅ `Persistence`: SQLite (dev), PostgreSQL (prod)
-- ✅ `Authentication`: Session Based, `OAuth` via Github
 - ✅ `Deployment`: Render, AWS Apprunner, Docker, Page Compression (Flask-Minify) 
 
 <br />
@@ -59,9 +58,6 @@ The meaning of each variable can be found below:
   - For production value `False` should be used
 - `ASSETS_ROOT`: used in assets management
   - default value: `/static/assets`
-- `OAuth` via Github
-  - `GITHUB_ID`=<GITHUB_ID_HERE>
-  - `GITHUB_SECRET`=<GITHUB_SECRET_HERE> 
 
 <br />
 
@@ -195,7 +191,6 @@ Within the download you'll find the following directories and files:
    |    |    |    |-- scripts.html          # Scripts common to all pages
    |    |    |
    |    |    |-- layouts/                   # Master pages
-   |    |    |    |-- layout-fullscreen.html  # Used by Authentication pages
    |    |    |    |-- layout.html             # Used by common pages
    |    |    |
    |    |    |-- accounts/                  # Authentication pages
